@@ -3,10 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FilterComponent } from './componnents/filter/filter.component';
+import { HeaderComponent } from './componnents/header/header.component';
+import { CocktailsComponent } from './componnents/cocktails/cocktails.component';
+import { MainLayoutComponent } from './componnents/main-layout/main-layout.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FilterComponent,
+    HeaderComponent,
+    CocktailsComponent,
+    MainLayoutComponent
   ],
   imports: [
     BrowserModule,
