@@ -7,6 +7,7 @@ import { FilterComponent } from './componnents/filter/filter.component';
 import { HeaderComponent } from './componnents/header/header.component';
 import { CocktailsComponent } from './componnents/cocktails/cocktails.component';
 import { MainLayoutComponent } from './componnents/main-layout/main-layout.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MainLayoutComponent } from './componnents/main-layout/main-layout.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

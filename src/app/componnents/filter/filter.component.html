@@ -1,1 +1,11 @@
-<p>filter works!</p>
+<div class="filter-wrap">
+  <ul>
+    <li *ngFor="let item of filterItem">
+      <label for="">
+        <input type="checkbox" name="" id="">
+        {{item.strCategory}}
+      </label>
+    </li>
+  </ul>
+  <button class="btn btn-filter">Apply</button>
+</div>
