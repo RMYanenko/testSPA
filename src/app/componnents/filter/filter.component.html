@@ -1,11 +1,16 @@
 <div class="filter-wrap">
   <ul>
-    <li *ngFor="let item of filterItem">
-      <label for="">
-        <input type="checkbox" name="" id="">
+    <li *ngFor="let item of drinks">
+      <label for="{{item.strCategory}}">
+        <input
+          type="checkbox"
+          name="{{item.strCategory}}"
+          id="{{item.strCategory}}"
+          (change)="onCheck(item.strCategory)"
+        >
         {{item.strCategory}}
       </label>
     </li>
   </ul>
-  <button class="btn btn-filter">Apply</button>
+  <button type="button" (click)="apply()" class="btn btn-filter">Apply</button>
 </div>

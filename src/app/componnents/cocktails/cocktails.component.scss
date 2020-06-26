@@ -5,31 +5,39 @@ h2 {
   font-size: 24px;
   line-height: 28px;
   color: #818181;
+  width: 100%;
+  padding-top: 20px;
+  border-bottom: 1px solid #D0D0D0;
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
   width: 100%;
-  .item-wrapper {
-    padding-top: 30px;
-    flex: 1 1 215px;
-    img {
-      width: 150px;
-      height: 150px;
-      display: flex;
-      margin: auto;
-    }
-    h3 {
-      padding-top: 20px;
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 21px;
-      color: #000000;
-      text-align: center;
+  padding: 20px;
+  .cocktails-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    .item-wrapper {
+      padding-top: 30px;
+      flex: 1 1 215px;
+      img {
+        width: 150px;
+        height: 150px;
+        display: flex;
+        margin: auto;
+      }
+      h3 {
+        padding-top: 20px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        color: #000000;
+        text-align: center;
+      }
     }
   }
+
 }
 

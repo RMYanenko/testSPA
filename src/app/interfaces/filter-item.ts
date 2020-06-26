@@ -1,3 +1,4 @@
 export interface FilterItem {
-  strCategory: string;
+  drinks: {strCategory: string}[];
 }
+

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpService } from 'src/app/services/http.service';
+import {Component, OnInit} from '@angular/core';
+import { CocktailsService } from 'src/app/services/cocktails.service';
 import { CocktailItem } from 'src/app/interfaces/cocktail-item';
 
 @Component({
@@ -9,16 +9,13 @@ import { CocktailItem } from 'src/app/interfaces/cocktail-item';
 })
 export class CocktailsComponent implements OnInit {
 
-  cocktailItem:CocktailItem[] = [];
+  cocktailItems = [];
 
   constructor(
-    private httpServise: HttpService
+    private cocktailsService: CocktailsService
   ) { }
 
   ngOnInit(): void {
-    this.httpServise.getCocktailList()
-    .subscribe(
-      data => this.cocktailItem = data
-    )
+    this.cocktailItems = this.cocktailsService.cocktailItems;
   }
 }

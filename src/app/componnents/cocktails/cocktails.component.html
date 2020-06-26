@@ -1,9 +1,9 @@
-<h2>
-  Ordinary Drink
-</h2>
 <div class="container">
-  <div class="item-wrapper" *ngFor="let cocktail of cocktailItem">
-    <img src="{{cocktail.strDrinkThumb}}" alt="" srcset="">
-    <h3>{{cocktail.strDrink}}</h3>
+  <div class="cocktails-wrapper" *ngFor="let cocktail of cocktailItems">
+    <h2>{{cocktail.title}}</h2>
+    <div class="item-wrapper" *ngFor="let item of cocktail.drinks">
+      <img src="{{item.strDrinkThumb}}" alt="" srcset="">
+      <h3>{{item.strDrink}}</h3>
+    </div>
   </div>
 </div>
