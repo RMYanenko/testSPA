@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { FilterItem } from '../interfaces/filter-item';
@@ -21,9 +21,9 @@ export class HttpService {
   }
 
   getCocktailList() :Observable<CocktailItem[]>{
-    return this.http.get('https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary Drink')
-    .pipe(
-      map(response => response[this.nameFilters])
-    )
+    return this.http.get('https://www.thecocktaildb.com/api/json/v1/1/filter.php?', {
+      params: new HttpParams().set('c', 'Ordinary Drink')}).pipe(
+        map(response => response[this.nameFilters])
+      )
   }
 }
